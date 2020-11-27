@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Settings</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div
+  fxLayout="column"
+  fxLayoutGap="10px"
+  fxLayoutAlign="space-around stretch"
+  class="form-container"
+  >
+  <form [formGroup]="form" (ngSubmit)="addKey()" >
+  <div>
+    
+      <label for="key">NewsAPI.org</label><br>
+      <input id="key" type="text" size="50" formControlName="key" placeholder="API from newsapi.org"/><br>
+      <label for="name">Please enter the API key from newsapi.org</label><br>
+   
+  </div>
+  <button type="button" [routerLink]="['/']">Back</button> &nbsp;
+  <button type="button" (click)="deleteKey()">Delete</button> &nbsp;
+  <button type="button" (click)="addKey()">Add</button> &nbsp;
+  </form>

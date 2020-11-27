@@ -1,0 +1,11 @@
+
+
+<h2>Countries</h2>
+<button type="button" [routerLink]="['/apisetting']" >Settings</button>
+
+<table>
+    <tr *ngFor="let i of countries" [routerLink]="['/news', i.code]">
+        {{i.name}}-<img [src]="i.flag" style="width: 50px;">
+    </tr>
+</table>
+
